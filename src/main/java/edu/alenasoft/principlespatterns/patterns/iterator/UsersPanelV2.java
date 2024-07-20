@@ -3,14 +3,13 @@ package edu.alenasoft.principlespatterns.patterns.iterator;
 import java.util.ArrayList;
 import java.util.List;
 
+// Client
 public class UsersPanelV2 {
 
   private final List<Aggregate> aggregates;
 
     public UsersPanelV2() {
       aggregates = new ArrayList<>();
-      aggregates.add(new FacebookAggregate());
-      aggregates.add(new GoogleAggregate());
     }
 
     public void addAggregate(Aggregate aggregate) {

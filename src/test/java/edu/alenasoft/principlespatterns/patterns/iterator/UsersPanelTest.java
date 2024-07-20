@@ -14,6 +14,7 @@ class UsersPanelTest {
   @Test
   void show_users_v2() {
     var panel = new UsersPanelV2();
+    panel.addAggregate(new GoogleAggregate());
 
     panel.show();
   }
@@ -25,6 +26,7 @@ class UsersPanelTest {
     panel.show();
     System.out.println("futuro");
     panel.addAggregate(new GoogleAggregate());
+    panel.addAggregate(new FacebookAggregate());
     panel.show();
   }
 }
