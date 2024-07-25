@@ -51,7 +51,7 @@ public class DataModel {
 
   // notificar a los observadores
   // cuando haya cambios
-  public void notifyObservers() {
+  private void notifyObservers() {
     this.observers.forEach(Observer::print);
   }
 }
