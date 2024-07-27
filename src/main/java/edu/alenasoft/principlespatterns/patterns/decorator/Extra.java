@@ -1,20 +1,25 @@
 package edu.alenasoft.principlespatterns.patterns.decorator;
 
-public class Extra {
+// Decorator
+public class Extra implements Food {
 
+    private final Food food;
     private final String name;
     private final int price;
 
-    public Extra(String name, int price) {
+    public Extra(Food food, String name, int price) {
+        this.food = food;
         this.name = name;
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String details() {
+        return this.food.details() + ", " + this.name;
     }
 
+    @Override
     public int getPrice() {
-        return price;
+        return this.food.getPrice() + this.price;
     }
 }
