@@ -3,29 +3,25 @@ package edu.alenasoft.principlespatterns.patterns.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Folder {
+// Composite
+public class Directory implements File {
 
   private final String name;
+  // Leaf
   private final List<File> files;
-  private final List<Folder> folders;
 
-  public Folder(String name) {
+  public Directory(String name) {
     this.name = name;
     this.files = new ArrayList<>();
-    this.folders = new ArrayList<>();
   }
 
-  public void addFile(File file) {
+  public void add(File file) {
     this.files.add(file);
   }
 
-  public void addFolder(Folder folder) {
-      this.folders.add(folder);
-  }
-
+  @Override
   public void print() {
     System.out.println("+ " + name);
     this.files.forEach(File::print);
-    this.folders.forEach(Folder::print);
   }
 }

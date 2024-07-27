@@ -3,22 +3,27 @@ package edu.alenasoft.principlespatterns.patterns.composite;
 public class FileExplorerApp {
 
   public void print() {
-    var rootFolder = new Folder("root");
-    var file0 = new File("zero");
-    rootFolder.addFile(file0);
+    var rootDirectory = new Directory("root");
+    var file0 = new FileLeaf("zero");
+    rootDirectory.add(file0);
 
-    var subFolder = new Folder("subFolder");
-    var file1 = new File("one");
-    var file2 = new File("two");
-    subFolder.addFile(file1);
-    subFolder.addFile(file2);
+    var subDirectory = new Directory("subDirectory");
+    var file1 = new FileLeaf("one");
+    var file2 = new FileLeaf("two");
+    subDirectory.add(file1);
+    subDirectory.add(file2);
 
-    var subSubFolder = new Folder("subSubFolder");
-    subSubFolder.addFile(new File("extra"));
-    subFolder.addFolder(subSubFolder);
+    var subSubDirectory = new Directory("subSubDirectory");
+    subSubDirectory.add(new FileLeaf("extra"));
+    subDirectory.add(subSubDirectory);
 
-    rootFolder.addFolder(subFolder);
+    rootDirectory.add(subDirectory);
+    rootDirectory.add(new LinkFile("webfiles", "/var/www"));
 
-    rootFolder.print();
+    rootDirectory.print();
+
+    subDirectory.print();
+
+    file1.print();
   }
 }

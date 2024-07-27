@@ -1,14 +1,7 @@
 package edu.alenasoft.principlespatterns.patterns.composite;
 
-public class File {
+// Component
+public interface File {
 
-  private final String name;
-
-  public File(String name) {
-    this.name = name;
-  }
-
-  public void print() {
-    System.out.println("- " + name);
-  }
+    void print();
 }
