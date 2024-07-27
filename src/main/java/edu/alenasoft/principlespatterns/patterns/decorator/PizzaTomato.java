@@ -1,10 +1,10 @@
 package edu.alenasoft.principlespatterns.patterns.decorator;
 
-public class PizzaTomatoe extends Pizza {
+public class PizzaTomato extends Pizza {
 
   private final int ownPrice;
 
-  public PizzaTomatoe(int pizzePrice, int ownPrice) {
+  public PizzaTomato(int pizzePrice, int ownPrice) {
     super(pizzePrice);
     this.ownPrice = ownPrice;
   }
