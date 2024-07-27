@@ -2,7 +2,7 @@ package edu.alenasoft.principlespatterns.patterns.composite;
 
 import org.junit.jupiter.api.Test;
 
-class FileLeafExplorerAppTest {
+class FileExplorerAppTest {
 
     @Test
     void execute() {
