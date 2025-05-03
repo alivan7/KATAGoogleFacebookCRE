@@ -65,15 +65,7 @@ Cada kata incluye una breve descripción del problema, la necesidad de ISP y la 
 
 ---
 
-# README para las Katas de ISP
-
-## **Katas del Principio de Segregación de Interfaces (ISP)**
-
-El Principio de Segregación de Interfaces (ISP) establece que ningún cliente debe verse obligado a depender de métodos que no utiliza. Estas katas están diseñadas para ayudarte a comprender y aplicar ISP en escenarios del mundo real.
-
----
-
-## **Pasos para Cada Kata**
+## **Pasos a seguir para la resolución de cada Kata**
 
 1. **Comprender el Problema:**
    - Leer la descripción de la kata.
